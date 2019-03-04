@@ -9,7 +9,7 @@
 irishbabynames
 }
 \description{
-Irish baby name data provided by the Irish CSO This includes all names
+Irish baby name data provided by the Irish CSO. This includes all names
 that occur at least three times in the year.
 }
 \keyword{datasets}

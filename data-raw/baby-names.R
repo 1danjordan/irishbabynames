@@ -14,7 +14,7 @@ boys <- pxR::read.px(boys_link) %>%
     year = as.integer(levels(year))[year],
     name = as.character(name),
     value = as.integer(value),
-    sex = "Male"
+    sex = "male"
   ) %>%
   select(year, sex, name, n = value)
 
@@ -28,11 +28,11 @@ girls <- pxR::read.px(girls_link) %>%
     year = as.integer(levels(year))[year],
     name = as.character(name),
     value = as.integer(value),
-    sex = "Female"
+    sex = "female"
   ) %>%
   select(year, sex, name, n = value)
 
-irishbabynames <- bind_rows(boys, girls)
+babynames <- bind_rows(boys, girls)
 
-write.csv(irishbabynames, "data-raw/irish-baby-names.csv")
-usethis::use_data(irishbabynames, compress = "xz", overwrite = TRUE)
+write.csv(babynames, "data-raw/baby-names.csv")
+usethis::use_data(babynames, compress = "xz", overwrite = TRUE)
